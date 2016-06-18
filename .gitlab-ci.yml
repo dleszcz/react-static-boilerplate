@@ -1,0 +1,8 @@
+before_script:
+  - apt-get update -qq && apt-get install -y -qq nodejs
+  - npm --version
+  - npm install
+
+npm:
+  script:
+    - npm build
