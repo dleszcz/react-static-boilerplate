@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 
 import { configureStore } from 'store';
-import rootSaga from 'sagas';
 
 export default class Root extends Component {
 
@@ -14,7 +13,6 @@ export default class Root extends Component {
   }
 
   componentDidMount() {
-    this.state.store.runSaga(rootSaga)
   }
 
   render() {

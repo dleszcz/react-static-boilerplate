@@ -27,6 +27,5 @@ export const aliases = [
   'components',
   'reducers',
   'routes',
-  'sagas',
   'store',
 ].reduce((acc, x) => ((acc[x] = paths.app(x)) && acc), {});
