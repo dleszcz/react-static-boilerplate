@@ -3,14 +3,15 @@ import {
   createStore,
 } from 'redux';
 
-import rootReducer from '../reducers';
+import rootReducer from '../redux';
 
 export const configureStore = (initialState = {}) => {
   const store = createStore(
-    rootReducer, 
-    initialState);
-  
+    rootReducer,
+    initialState
+  );
+
   store.close = () => store.dispatch();
-  
+
   return store;
 };
