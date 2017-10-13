@@ -1,3 +1,5 @@
+import { keys } from '../keys';
+
 const initialState = {
   counter: 0,
 };
@@ -7,9 +9,9 @@ const reducer = (state = initialState, action) => {
     console.log('state', state);
 
     switch (action.type) {
-    case 'INCREMENT':
+    case keys.COUNTER_INCREMENT:
         return { ...state, counter: state.counter + 1 };
-    case 'DECREMENT':
+    case keys.COUNTER_DECREMENT:
         return { ...state, counter: state.counter - 1 };
     default:
       return state;

@@ -6,13 +6,15 @@ import { About } from './about.component';
 
 const mapStateToProps = (state) => {
     return {
-        counter: state.counter
+        counter: state.counterReducer.counter
     };
 };
 
-export const mapDispatchToProps = (dispatch) => bindActionCreators({
-    onIncrement: () => dispatch({ type: 'INCREMENT' }),
-    onDecrement: () => dispatch({ type: 'DECREMENT' }),
-}, dispatch);
+export const mapDispatchToProps = (dispatch) => {
+    return {
+        onIncrement: () => dispatch({ type: 'INCREMENT' }),
+        onDecrement: () => dispatch({ type: 'DECREMENT' })
+    }
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(About);
