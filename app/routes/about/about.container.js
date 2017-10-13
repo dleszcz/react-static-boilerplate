@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux';
 
 import { About } from './about.component';
 
+import { counterIncrement, counterDecrement } from '../../redux/actions/counter';
+
 
 const mapStateToProps = (state) => {
     return {
@@ -12,8 +14,8 @@ const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
     return {
-        onIncrement: () => dispatch({ type: 'INCREMENT' }),
-        onDecrement: () => dispatch({ type: 'DECREMENT' })
+        onIncrement: () => dispatch(counterIncrement()),
+        onDecrement: () => dispatch(counterDecrement())
     }
 };
 

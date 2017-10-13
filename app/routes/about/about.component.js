@@ -3,18 +3,11 @@ import { Link } from 'react-router';
 
 export class About extends Component {
     constructor(props) {
-        console.log('About constructor props', props);
-
         super(props);
-    }
-
-    componentDidMount() {
-        console.log('About componentDidMount props', this.props)
     }
 
     render() {
         const { counter, onDecrement, onIncrement } = this.props;
-        console.log('About render props', this.props);
 
         return (
             <div className="about">

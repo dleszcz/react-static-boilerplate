@@ -3,18 +3,11 @@ import { Link } from 'react-router';
 
 export class Contact extends Component {
     constructor(props) {
-        console.log('Contact constructor props', props);
-
         super(props);
-    }
-
-    componentDidMount() {
-        console.log('Contact componentDidMount props', this.props)
     }
 
     render() {
         const { counter, onDecrement, onIncrement } = this.props;
-        console.log('Contact render props', this.props);
 
         return (
             <div className="contact">
