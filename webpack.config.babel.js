@@ -1,7 +1,8 @@
 // all paths in `app/routes/index` go here
 const pathsToCrawl = [
   '/',
-  '/signin',
+  '/contact',
+  '/about',
 ];
 
 const path = require('path');

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { reducer as github } from './github';
+import { reducer as counterReducer } from './counter';
 
 export default combineReducers({
-  github,
+    counterReducer,
 });
